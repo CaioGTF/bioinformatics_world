@@ -1,0 +1,215 @@
+/* fontes utilizadas*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/* para mobile */
+@media only screen and (max-width: 767px) { 
+  }
+ /*  para desktops*/
+@media only screen and (min-width: 1024px) {
+} 
+/* para tablets */
+  
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+  
+
+@media screen and (max-width: 768px) {
+    body {
+      grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-rows: auto 1fr auto auto; /* Altera a ordem e a altura das linhas */
+    }
+  }
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXwp4OvkQqTLyj7Fi0HwEBLjJlCeP3aT9na_POoefZiA&s'); /* imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* imagem fixa ao rolar a tela*/
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+      /* ferramenta para afinar os traços das letras na fonte - já existe
+    no chrome*/
+    -webkit-font-smoothing: antialiased;
+}
+
+.imagens {
+    display: flex;
+  flex-wrap: wrap; /* Permite que as imagens reajustem em várias linhas */
+  gap: 10px; /* Espaçamento entre as imagens definido*/
+}
+
+.imagens img {
+    width: 300px; /* Largura de 1/3 da largura do contêiner menos o espaçamento */
+    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner. Fiquem no limite do site */
+    height: auto; /* Mantém a proporção da imagem ideal para o site */
+  }
+
+h1 {
+    font: "DM Sans", sans-serif;
+    color: blue; /* cor do título */
+    font-size: 16px; /* tamanho do título */
+    font-weight: bolder; /* peso da fonte do título */
+    font-size: 200%;
+}
+main {
+    grid-area: main;
+}
+header {
+    grid-area: header;
+    background-color: white;
+    text-align: center;
+    display: inline;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: lightgrey;
+    padding: 20px;
+    font: "DM Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+header h1 {
+    font: "DM Sans", sans-serif;
+    color: rgb(51, 51, 194);
+}
+
+h2 {
+    font: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3 {
+    font: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+p {
+    font: "Open Sans", sans-serif;
+    font-weight: lighter;
+}
+
+img {
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Estilos para a navegação */
+nav ul {
+    list-style-type: none;
+    /* remove marcadores da lista */
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    /* exibe os itens na horizontal */
+    margin-right: 20px;
+    /* espaço entre os itens */
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    /* remove sublinhado */
+    color: black;
+    /* cor padrão */
+}
+
+nav a:hover {
+    color: blue;
+    /* altera cor ao passar o mouse */
+    transition: 0.5s;
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+}
+
+nav a:active {
+    transform: scale(0.9); /* Reduz o tamanho em 10% quando clicado */
+}
+
+/* Estilos para as seções */
+section {
+    margin: 20px 0;
+    /* margem superior e inferior */
+    padding: 20px;
+    /* espaçamento interno */
+    color: black;
+    background-color: white;
+}
+
+section:nth-child(even) {
+    background-color: #c4ddf2;
+    /* cor de fundo alternada */
+}
+
+/* Estilos para o rodapé */
+footer {
+    grid-area: footer;
+    background-color: lightgray;
+    /* cinza escuro */
+    color: black;
+    /* texto branco */
+    text-align: center;
+    padding: 10px 0;
+    /* espaçamento interno */
+
+}
+
+
+.Contato {
+    max-width: 400px;
+  margin: 0 auto;
+}
+
+.Contato input[type="text"],
+.Contato input[type="email"],
+.Contato input[type="telephone"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.Contato .button {
+    width: 100%;
+  padding: 10px;
+  background-color: gainsboro;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+    transition: all 0.3s; /* Transição suave de todas as propriedades */
+    cursor: pointer;
+
+  }
+  
+.Contato .button:hover {
+
+  background-color: #c4ddf2; /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho em 10% */
+}
+
+.Contato .button:active {
+  transform: scale(0.9); /* Reduz o tamanho em 10% quando clicado */
+}
